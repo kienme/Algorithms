@@ -28,14 +28,15 @@ int findmin()
 			}
 
 	return min_vertex;
-
 }
 
 int main()
 {
+	//Initialize distances based on graph
 	for(int i = 0; i < 5; ++i)
 		dist[i] = G[v][i];
 
+	//Mark source vertex as visited
 	visited[v] = 1;
 
 	for(int i = 0; i < 5; ++i)
@@ -43,6 +44,7 @@ int main()
 		int u = findmin();
 		visited[u] = 1;
 
+		//For each node update distance based on nearest node u
 		for(int k = 0; k < 5; ++k)
 			if(visited[k] != 1)
 				if(dist[k] > dist[u]+G[u][k])
