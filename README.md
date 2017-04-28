@@ -25,6 +25,19 @@ dfs(v):
 [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 
 ## 3. Dijkstra's Algorithm
+### Algorithm
+G is the adjacency matrix representing the graph.  
+'v' is the source node from which shortest distance is computed.  
+'visited' array marks nodes as visited.  
+'dist' holds shortest distances from the source vertex.  
+
+1. Update distance array with distances from the source vertex (with values from the graph)
+2. Mark source vertex as visited
+3. Find nearest unvisited vertex 'u' from source
+4. For every node 'k' in the graph, check if distance from source to 'k' is less than sum of distances from source to 'u' and 'u' to 'k'
+5. If not, update distance to the new minimum
+6. Repeat from step 3 until all vertices are marked as visited  
+
 [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
 ## 4. Floyd-Warshall Algorithm
