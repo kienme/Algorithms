@@ -26,7 +26,7 @@ dfs(v):
 
 ## 3. Dijkstra's Algorithm
 ### Algorithm
-G is the adjacency matrix representing the graph.  
+G is the adjacency matrix representing the graph (999 represents ∞).  
 'v' is the source node from which shortest distance is computed.  
 'visited' array marks nodes as visited.  
 'dist' holds shortest distances from the source vertex.  
@@ -41,6 +41,15 @@ G is the adjacency matrix representing the graph.
 [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
 ## 4. Floyd-Warshall Algorithm
+### Algorithm
+G is the adjacency matrix representing the graph (999 represents ∞). 
+'dist' matrix holds the shortest distance values
+
+1. Initialize dist with G
+2. Consider each node 'i' in the graph as an intermediate node
+3. For every pair of vertices 'j' and 'k', check if distance from 'j' to 'k' is shorter than sum of distances from 'j' to 'i' and 'i' to 'k'
+4. If not, update dist with the minimum value
+
 [Wikipedia](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 
 ## 5. Kruskal's Algorithm
