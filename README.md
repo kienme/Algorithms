@@ -2,7 +2,7 @@
 Simple, small sized implementation of select algorithms in C++
 
 ## 1. Breadth First Search (BFS)
-Used for traversing a graph
+_Used for traversing a graph_
 ### Algorithm
 G is the adjacency matrix representing the graph.  
 'visited' array marks nodes as visited.
@@ -15,7 +15,7 @@ bfs(v):
 [Wikipedia](https://en.wikipedia.org/wiki/Breadth-first_search)
 
 ## 2. Depth First Search (DFS)
-Used for traversing a graph
+_Used for traversing a graph_
 ### Algorithm
 G is the adjacency matrix representing the graph.  
 'visited' array marks nodes as visited.
@@ -27,24 +27,24 @@ dfs(v):
 [Wikipedia](https://en.wikipedia.org/wiki/Depth-first_search)
 
 ## 3. Dijkstra's Algorithm
-Used to find shortest path from a source to all other nodes
+_Used to find shortest path from a source to all other nodes_
 ### Algorithm
 G is the adjacency matrix representing the graph (999 represents ∞).  
 'v' is the source node from which shortest distance is computed.  
 'visited' array marks nodes as visited.  
-'dist' holds shortest distances from the source vertex.  
+'dist' holds shortest distances from the source node
 
-1. Update distance array with distances from the source vertex (with values from the graph)
-2. Mark source vertex as visited
-3. Find nearest unvisited vertex 'u' from source
+1. Update distance array with distances from the source node (with values from the graph)
+2. Mark source node as visited
+3. Find nearest unvisited node 'u' from source
 4. For every node 'k' in the graph, check if distance from source to 'k' is less than sum of distances from source to 'u' and 'u' to 'k'
 5. If not, update distance to the new minimum
-6. Repeat from step 3 until all vertices are marked as visited  
+6. Repeat from step 3 until all nodes are marked as visited  
 
 [Wikipedia](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)
 
 ## 4. Floyd-Warshall Algorithm
-Used to find shortest paths for all pairs of nodes
+_Used to find shortest paths for all pairs of nodes_
 ### Algorithm
 G is the adjacency matrix representing the graph (999 represents ∞).  
 'dist' matrix holds the shortest distance values
@@ -57,6 +57,16 @@ G is the adjacency matrix representing the graph (999 represents ∞).
 [Wikipedia](https://en.wikipedia.org/wiki/Floyd%E2%80%93Warshall_algorithm)
 
 ## 5. Kruskal's Algorithm
+_Used to find minimum spanning tree_
+### Algorithm
+G is the adjacency matrix representing the graph (999 represents ∞).  
+'parent' is used to keep track of connected nodes and check for loops.  
+
+1. Find the shortest edge in the graph. Call the nodes 'u' and 'v'.
+2. Check if 'u' and 'v' are connected by a common parent
+3. If not, select the edge, update the cost, and set 'u' as parent of 'v'
+4. Repeat from step 1 till n-1 edges are found (n is number of nodes in the graph)
+
 [Wikipedia](https://en.wikipedia.org/wiki/Kruskal's_algorithm)
 
 ## 6. N-Queen's Problem 
