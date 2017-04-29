@@ -70,6 +70,16 @@ G is the adjacency matrix representing the graph (999 represents ∞).
 [Wikipedia](https://en.wikipedia.org/wiki/Kruskal's_algorithm)
 
 ## 6. N-Queen's Problem 
+_For a given NxN chess board, find the ways in which N queens can be placed so that no two queens share the same row, column or diagonal_
+### Algorithm (Backtracking)
+'col' array holds the column numbers(of successive rows) where queen can be placed  
+
+nq(N, k):
+1. For given row 'k', check each column if queen can be placed.
+2. If yes, update col and call nq(N, k+1)
+3. If last row has been reached, display 'col'
+5. Repeat step 1 for each row
+
 [Wikipedia](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 
 ## 7. Prim's Algorithm
