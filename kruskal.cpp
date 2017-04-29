@@ -21,6 +21,7 @@ int main()
 	{
 		min = 999;
 
+		//Find minimum length edge from the graph
 		for(int i = 0; i < 6; ++i)
 			for(int k = 0; k < 6; ++k)
 				if(G[i][k] < min)
@@ -30,15 +31,18 @@ int main()
 					v = k;
 				}
 		
+		//Copy to temporary variables
 		int t_u = u;
 		int t_v = v;
 
+		//Find node connected to 'u' and 'v'
 		while(parent[t_u] != -1)
 			t_u = parent[t_u];
 
 		while(parent[t_v] != -1)
 			t_v = parent[t_v];
 
+		//If 'u' and 'v' do not have a common parent, joining them does not form a loop
 		if(t_u != t_v)
 		{
 			num_edges++;
@@ -48,6 +52,7 @@ int main()
 			cout<<v<<"->"<<u<<"\n";
 		}
 
+		//Set distance between the nodes as infinity. Consider using a copy of the graph to preserve original
 		G[u][v] = G[v][u] = 999;
 	}
 
