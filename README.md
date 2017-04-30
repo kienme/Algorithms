@@ -36,7 +36,7 @@ _Used to find shortest path from a source to all other nodes_
 G is the adjacency matrix representing the graph (999 represents ∞).  
 'v' is the source node from which shortest distance is computed.  
 'visited' array marks nodes as visited.  
-'dist' holds shortest distances from the source node
+'dist' holds shortest distances from the source node.
 
 1. Update distance array with distances from the source node (with values from the graph)
 2. Mark source node as visited
@@ -53,7 +53,7 @@ G is the adjacency matrix representing the graph (999 represents ∞).
 _Used to find shortest paths for all pairs of nodes_
 ### Algorithm
 G is the adjacency matrix representing the graph (999 represents ∞).  
-'dist' matrix holds the shortest distance values
+'dist' matrix holds the shortest distance values.
 
 1. Initialize dist with G
 2. Consider each node 'i' in the graph as an intermediate node
@@ -70,7 +70,7 @@ _Used to find minimum spanning tree_
 G is the adjacency matrix representing the graph (999 represents ∞).  
 'parent' is used to keep track of connected nodes and check for loops.  
 
-1. Find the shortest edge in the graph. Call the nodes 'u' and 'v'.
+1. Find the shortest edge in the graph. Call the nodes 'u' and 'v'
 2. Check if 'u' and 'v' are connected by a common parent
 3. If not, select the edge, update the cost, and set 'u' as parent of 'v'
 4. Repeat from step 1 till n-1 edges are found (n is number of nodes in the graph)
@@ -82,10 +82,10 @@ G is the adjacency matrix representing the graph (999 represents ∞).
 ## 6. N-Queen's Problem 
 _For a given NxN chess board, find the ways in which N queens can be placed so that no two queens share the same row, column or diagonal_
 ### Algorithm (Backtracking)
-'col' array holds the column numbers(of successive rows) where queen can be placed  
+'col' array holds the column numbers(of successive rows) where queen can be placed.  
 
 nq(N, k):
-1. For given row 'k', check each column if queen can be placed.
+1. For given row 'k', check each column if queen can be placed
 2. If yes, update col and call nq(N, k+1)
 3. If last row has been reached, display 'col'
 5. Repeat step 1 for each row
@@ -95,6 +95,16 @@ nq(N, k):
 [Wikipedia](https://en.wikipedia.org/wiki/Eight_queens_puzzle)
 
 ## 7. Prim's Algorithm
+_Used to find minimum spanning tree_
+### Algorithm
+G is the adjacency matrix representing the graph (999 represents ∞).  
+'visited' array marks nodes as visited.  
+
+1. Mark first node as visited
+2. Find the nearest unvisited node from any of the visited nodes
+3. Mark it as visited
+4. Repeat from step 2 till all nodes are visited
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/9/9b/PrimAlgDemo.gif" width="250"/>  
 
 [Wikipedia](https://en.wikipedia.org/wiki/Prim's_algorithm)
