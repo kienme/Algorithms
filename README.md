@@ -110,6 +110,18 @@ G is the adjacency matrix representing the graph (999 represents ∞).
 [Wikipedia](https://en.wikipedia.org/wiki/Prim's_algorithm)
 
 ## 8. Subset Sum Problem
+_For a given set of integers, check if there exists a subset of it such that the sum of its integers equals a given value M_
+### Algorithm
+M is the value of the sum  
+'val' array holds the given integer set in ascending order, along with a large integer as the last element. This is to avoid checking for end of array  
+'selected' marks elements that are to be taken  
+
+sumofsub(sum, k):
+1. Mark element k as selected, and check if including it gives M
+2. If yes, display selected items
+3. Else, if including current _and_ next element can give M, call sumofsub(sum+val[k], k+1)
+4. Check if leaving out current element can give M, call sumofsub(sum, k+1)
+
 [Wikipedia](https://en.wikipedia.org/wiki/Subset_sum_problem)
 
 ## 9. Travelling Salesman Problem
