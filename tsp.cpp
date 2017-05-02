@@ -18,10 +18,12 @@ void tsp_brute(int cur)
 	{
 		int t_cost = 0;
 
+		//Calculate cost of current route
 		for(int i = 0; i < n-1; ++i)
 			t_cost += G[v[i]][v[i+1]];
-		t_cost += G[v[n-1]][v[0]];
+		t_cost += G[v[n-1]][v[0]];			//Add cost of last-to-first path
 
+		//Find minimum of such costs
 		if(t_cost < cost_brute)
 		{
 			cost_brute = t_cost;
@@ -31,6 +33,7 @@ void tsp_brute(int cur)
 	}
 
 	else
+		//Swap current node with all other remaining ones and calculate cost
 		for(int i = cur; i < n; ++i)
 		{
 			int temp = v[cur]; v[cur] = v[i]; v[i] = temp;
@@ -41,6 +44,7 @@ void tsp_brute(int cur)
 
 int main()
 {
+	//Set a default route
 	for(int i = 0; i < n; ++i)
 		v[i] = i;	
 
