@@ -125,6 +125,19 @@ sumofsub(sum, k):
 [Wikipedia](https://en.wikipedia.org/wiki/Subset_sum_problem)
 
 ## 9. Travelling Salesman Problem
+_For a given a list of cities and the distances between each pair of cities, find the shortest possible route that visits each city exactly once and returns to the origin city_
+### Algorithm (Brute Force)
+'tour_brute' and 'cost_brute' represent the final tour and cost respectively.  
+'v' array holds the route that is currently being tested.  
+
+tsp_brute(cur):
+1. If last node has been reached, find cost of current route
+2. If this cost is the smallest so far, copy 'v' to 'tour_brute'
+3. If not last node, for each of the remaining nodes:  
+    a. swap with current node in 'v'  
+    b. call tsp_brute(cur+1)  
+    c. restore values by swapping back
+
 <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Bruteforce.gif" height="250"/>  
 
 [Wikipedia](https://en.wikipedia.org/wiki/Travelling_salesman_problem)
