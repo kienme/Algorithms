@@ -2,7 +2,7 @@
 
 using namespace std;
 
-int n = 4, tour_brute[10], cost_brute = 999, v[10], k = 0;
+int n = 4, tour_brute[10], cost_brute = 999, v[10];
 
 int G[4][4]={	{0, 1, 3, 6},
 				{1, 0, 2, 3},
