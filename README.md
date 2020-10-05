@@ -2,7 +2,8 @@
 Simple, small sized implementation of select algorithms in C++
 
 ## 1. Breadth First Search (BFS)
-_Used for traversing a graph_
+_This is used for traversing a graph._
+
 ### Algorithm
 G is the adjacency matrix representing the graph.  
 'visited' array marks nodes as visited.
